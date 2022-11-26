@@ -1,0 +1,77 @@
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+
+  theme: {
+    extend: {
+      fontFamily: { lato: ["Lato", "sans-serif"] },
+
+      fontSize: {
+        h1: "9.6rem",
+        h2: "6rem",
+        h3: "4.8rem",
+        h4: "3.4rem",
+        h5: "2.4rem",
+        h6: "2rem",
+        "subtitle-1": "1.6rem",
+        "subtitle-2": "1.4rem",
+        "body-1": "1.6rem",
+        "body-2": "1.4rem",
+        button: "1.4rem",
+        caption: "1.2rem",
+        overline: "1rem",
+      },
+
+      fontWeight: {
+        1: 100,
+        2: 200,
+        3: 300,
+        4: 400,
+        5: 500,
+        6: 600,
+        7: 700,
+        8: 800,
+        9: 900,
+      },
+
+      colors: {
+        primary: "#00663b",
+        secondary: "#00283a",
+        background: "#fafafa",
+        neutral: "#d9d9d9",
+      },
+
+      screens: {
+        1920: { max: "1920px" },
+        1600: { max: "1600px" },
+        1550: { max: "1550px" },
+        1500: { max: "1500px" },
+        1450: { max: "1450px" },
+        1400: { max: "1400px" },
+        1350: { max: "1350px" },
+        1300: { max: "1300px" },
+        1250: { max: "1250px" },
+        1200: { max: "1200px" },
+        1150: { max: "1150px" },
+        1100: { max: "1100px" },
+        1050: { max: "1050px" },
+        1000: { max: "1000px" },
+        950: { max: "950px" },
+        900: { max: "900px" },
+        850: { max: "850px" },
+        800: { max: "800px" },
+        750: { max: "750px" },
+        700: { max: "700px" },
+        650: { max: "650px" },
+        600: { max: "600px" },
+        550: { max: "550px" },
+        500: { max: "500px" },
+        450: { max: "450px" },
+        400: { max: "400px" },
+        350: { max: "350px" },
+      },
+    },
+  },
+};
