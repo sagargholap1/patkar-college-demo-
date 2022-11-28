@@ -6,6 +6,7 @@ import { config } from "../../config";
 // Lib
 import { getConfig } from "@lib/get-config";
 import Form from "@/components/Common/Form/Form";
+import Map from "./Map";
 
 const Contact = ({ config: configuration }: any) => {
   return (
@@ -23,10 +24,10 @@ const Contact = ({ config: configuration }: any) => {
               className="flex justify-evenly items-center gap-[1rem] font-7"
               key={index}
             >
-              <div className="relative w-[1.5rem] h-[1.5rem]">
+              <div className="relative w-[2.5rem] h-[2.5rem]">
                 <Image src={detail.img} alt={""} fill />
               </div>
-              <div>{detail.text}</div>
+              <div className="text-h6">{detail.text}</div>
             </div>
           ))}
         </div>
@@ -37,8 +38,13 @@ const Contact = ({ config: configuration }: any) => {
         <FormsCard cardConfig={configuration.card} bgImage={""} />
       </div> */}
 
-      <div>
-        <Form />
+      <div className="flex justify-between items-center gap-[10rem] 1100:flex-col">
+        <div className="basis-2/5 w-[75%]">
+          <Form />
+        </div>
+        <div className="basis-3/5 1100:basis-0 w-[100%]">
+          <Map />
+        </div>
       </div>
     </section>
   );

@@ -115,6 +115,32 @@ export const config = {
     description:
       "Articles of general interest written by staff and students and the latest news about the College",
     buttonText: "View All",
+    gallery: {
+      id: "gallery",
+
+      images: [
+        {
+          id: "1",
+          title: "React",
+          imgUrl: "https://i.ibb.co/bsgytR1/Student.png",
+        },
+        {
+          id: "2",
+          title: "React",
+          imgUrl: "https://i.ibb.co/h8jGbrm/College-view.png",
+        },
+        {
+          id: "3",
+          title: "React",
+          imgUrl: "https://i.ibb.co/BTPK5DL/Canteen.png",
+        },
+        {
+          id: "4",
+          title: "React",
+          imgUrl: "https://i.ibb.co/j852R0M/Class.png",
+        },
+      ],
+    },
   },
 
   contact: {
@@ -145,6 +171,7 @@ export const config = {
       form: {
         content: {
           heading: "Please Fill Out Your Information",
+          buttonText: "Send",
           inputs: [
             {
               title: "Name",
@@ -172,6 +199,16 @@ export const config = {
               isRequired: true,
               value: "",
               placeholder: "Enter Your Phone Number",
+            },
+            {
+              title: "Message",
+              label: "department",
+              type: "select",
+              name: "department",
+              isRequired: true,
+              value: "",
+              options: ["B.sc", "BBA", "B.Com"],
+              placeholder: "Select Your Department",
             },
           ],
         },

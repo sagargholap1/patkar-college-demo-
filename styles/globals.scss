@@ -73,13 +73,10 @@
   }
 
   .wrapper {
-    @apply w-[90%] max-w-[144rem] mx-auto;
+    @apply w-[90%] max-w-[192rem] mx-auto;
   }
 
   .pointer {
     @apply cursor-pointer 900:cursor-default;
   }
-  // #slide {
-  //   @apply absolute left-[-10rem] w-[10rem] h-[10rem] animate- delay-[2s];
-  // }
 }

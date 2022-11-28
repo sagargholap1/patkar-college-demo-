@@ -56,7 +56,7 @@ const Button = ({
     bgColor ? bgColor : "bg-primary-main"
   } ${rounded ? "rounded-full p-[1rem]" : "rounded-sm px-[2rem] py-[0.8rem]"} ${
     fontBold ? "font-6" : "font-5"
-  }  1500:text-h6 text-h5 `;
+  }  1500:text-h6 text-h5`;
   const primaryButtonClass = `${baseClass} bg-primary text-white`;
   const outlineButtonClass = `${baseClass} border-[2px]`;
   const textButtonClass = `${baseClass}`;
@@ -76,7 +76,7 @@ const Button = ({
         <div className="flex items-center justify-center gap-[1rem]">
           {children && <span>{children}</span>}
           {icon && (
-            <div className="relative w-[1.5rem] h-[1.5rem] align-middle">
+            <div className="relative w-[1.5rem] h-[1.5rem]">
               <Image src={icon} alt="Icon" fill />
             </div>
           )}

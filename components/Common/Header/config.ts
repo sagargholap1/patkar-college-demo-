@@ -11,6 +11,7 @@ export const config = {
     gradeLogo: "https://i.ibb.co/G3Svrs4/grade-logo.png",
     hamicon: "https://i.ibb.co/LCsnchf/icons8-menu-96.png",
     searchicon: "https://i.ibb.co/XVCDj51/icons8-search-100-1.png",
+    downicon: "https://i.ibb.co/5498mhD/arrow-203-64.png",
 
     mainLinks: [
       {

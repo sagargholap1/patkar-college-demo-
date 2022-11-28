@@ -77,23 +77,25 @@ const Hero = ({ config: configuration }: any) => {
           <div className=" w-[90%] flex justify-between gap-[5rem]  items-center 900:items-start 900:flex-col-reverse">
             {/* LEFT */}
             <div className="flex flex-col basis-1/2 1500:gap-[5rem] gap-[6rem] ">
-              <div className="1500:text-h3 font-5 text-h3 ">
+              <div className="1500:text-h3 font-5 text-h3 900:text-subtitle2 ">
                 {configuration.title}
               </div>
-              <div className="1500:text-h5 text-h5 font-4 ">
+              <div className="1500:text-h5 text-h5 font-4 900:text-subtitle-2 ">
                 {configuration.description}
               </div>
-              <Button
-                type="primary"
-                icon="https://cdn-icons-png.flaticon.com/512/271/271228.png"
-                url="/"
-              >
-                {configuration.button_text_primary}
-              </Button>
+              <div className="w-[25%] 1200:w-[50%] ">
+                <Button
+                  type="primary"
+                  icon="https://i.ibb.co/bbPNRfC/arrow-30-64.png"
+                  url="/"
+                >
+                  {configuration.button_text_primary}
+                </Button>
+              </div>
             </div>
             {/* RIGHT */}
             <div className="basis-1/2 ">
-              <div className="flex flex-col items-end 900:items-center justify-between 900:flex-row gap-[5rem]  ">
+              <div className="flex flex-col items-end 900:items-center justify-between  900:flex-row gap-[5rem]">
                 <Button
                   type="outline"
                   icon="https://i.ibb.co/MVSwZ8X/Vector1.png"

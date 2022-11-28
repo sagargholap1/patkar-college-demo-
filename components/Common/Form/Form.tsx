@@ -8,10 +8,10 @@ import { toast } from "react-toastify";
 import Button from "../Buttons/Button";
 
 // Types
-import { config } from "../../Common/Form/formconfig";
+import { config } from "../../Pages/HomePage/config";
 
 const Form = () => {
-  const { contactForm: configuration } = config;
+  const { contact: configuration } = config;
 
   // States
   // const { activeCard, card1, card2 } = cardConfig;
@@ -21,20 +21,22 @@ const Form = () => {
 
   // Handle Change
   const handleChange = (label: string, value: string | number) => {
-    const inputs = configuration.form.content.inputs.map((input) => {
-      if (input.label === label) return { ...input, value };
-      else return input;
-    });
+    const inputs = configuration.contactForm.form.content.inputs.map(
+      (input) => {
+        if (input.label === label) return { ...input, value };
+        else return input;
+      }
+    );
   };
 
   return (
     <>
-      <div className="w-[25%] flex flex-col content-center gap-[2rem] border p-[2rem]">
+      <div className="w-[100%] flex flex-col content-center gap-[2rem] border-0 p-[1rem] 1100:w-[100%]">
         {/* <h4 className="text-center">{currentCard.content.heading}</h4> */}
 
-        {configuration.form.content.inputs.map((input, index) => {
+        {configuration.contactForm.form.content.inputs.map((input, index) => {
           const inputClass =
-            "bg-transparent focus:outline-none border-2 border-secondary-main focus:border-secondary-surface h-[4rem] px-[1rem] placeholder-secondary-main focus:placeholder-secondary-surface";
+            "bg-transparent focus:outline-none border-[1.5px]  border-black focus:border-secondary-surface h-[4rem] px-[1rem] placeholder-secondary-main focus:placeholder-secondary-surface";
 
           return (
             <label
@@ -103,10 +105,12 @@ const Form = () => {
           );
         })}
 
-        <div className="max-w-max m-auto">
-          <Button type="primary" url="/">
-            {configuration.form.content.buttonText}
-          </Button>
+        <div className="w-[100%] flex items-center justify-center ">
+          <div className="w-[100%]">
+            <Button type="primary" url="/">
+              {configuration.contactForm.form.content.buttonText}
+            </Button>
+          </div>
         </div>
       </div>
     </>
