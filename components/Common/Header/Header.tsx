@@ -107,7 +107,10 @@ const Header = ({ pageConfig }: any) => {
                     <RiCloseCircleLine />
                   </li>
                   {configData?.header?.mainLinks.map((d: any) => (
-                    <li key={d.name} className={`h-[9rem] 1200:h-max text-h6`}>
+                    <li
+                      key={d.name}
+                      className={`h-[9rem] 1100:!text-subtitle-1 1200:h-max text-h6`}
+                    >
                       <Link
                         href={d.url}
                         onClick={() => setShowMobileNav(false)}

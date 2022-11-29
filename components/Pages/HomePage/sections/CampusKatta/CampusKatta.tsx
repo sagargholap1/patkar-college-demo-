@@ -39,7 +39,7 @@ const CampusKatta = ({ config: configuration }: any) => {
           <div className="grid grid-cols-12 gap-[2rem]">
             {configuration?.gallery?.images?.map((img: any, i: any) => {
               const imgOneClass =
-                "col-span-4 row-span-2 1200:row-span-1 1200:col-span-6 900:!col-span-12 h-[82rem] 1200:h-[40rem] object-contain";
+                "col-span-4 row-span-2 1200:row-span-1 1200:col-span-6 900:!col-span-12 h-[82rem] 1200:h-[40rem] object-cover";
               const imgTwoClass =
                 "col-span-8 1200:col-span-6 900:!col-span-12 900:!h-[45rem] h-[40rem]";
               const otherImgClass =

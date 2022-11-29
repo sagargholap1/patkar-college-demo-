@@ -74,13 +74,13 @@ const Hero = ({ config: configuration }: any) => {
       >
         <div className="flex flex-col items-center justify-center gap-[5rem]  h-[calc(100vh-10rem-8rem)] 1100:h-[100%] 1100:py-[5rem]">
           {/* Top Section */}
-          <div className=" w-[90%] flex justify-between gap-[5rem]  items-center 900:items-start 900:flex-col-reverse">
+          <div className=" wrapper flex justify-between gap-[5rem]  items-center 900:items-start 900:flex-col-reverse">
             {/* LEFT */}
             <div className="flex flex-col basis-1/2 1500:gap-[5rem] gap-[6rem] ">
-              <div className="1500:text-h3 font-5 text-h3 900:text-subtitle2 ">
+              <div className="1500:text-h3 font-5 text-h3 1300:!text-h5 900:text-subtitle2 ">
                 {configuration?.title}
               </div>
-              <div className="1500:text-h5 text-h5 font-4 900:text-subtitle-2 ">
+              <div className="1500:text-h5 text-h5 font-4 1300:!text-h6 900:text-subtitle-2 ">
                 {configuration?.description}
               </div>
               <div className="w-[25%] 1200:w-[50%] ">
@@ -116,14 +116,13 @@ const Hero = ({ config: configuration }: any) => {
 
           {/* Bottom Notices Section */}
 
-          <div className="flex items-center justify-center w-[90%]">
-            {/* <div
+          {/* <div
               className="uppercase tracking-[.5rem] font-8 p-[3rem] text-[2rem] rotate-180  self-center text-white "
               style={{ writingMode: "vertical-rl" }}
             >
               {configuration.notice_header}
             </div> */}
-
+          <div className=" wrapper flex items-center justify-center w-[90%]">
             <div id="notices-container" className="w-[100%] justify-center">
               <Carousel
                 ref={(el) => (carouselRef = el)} // Saving component ref to use component features such as next & prev
@@ -137,7 +136,7 @@ const Hero = ({ config: configuration }: any) => {
                 {configuration?.notices?.map((notice: any, index: any) => (
                   <Link href={notice.url}>
                     <div
-                      className="1000:w-[20rem] 1000:h-[15rem] 1100:text-[1.4rem] 1350:w-[10rem] 1350:h-[21rem] 1600:w-[30rem] 1600:h-[21rem] w-[35rem] h-[21rem]  1500:text-[2rem] flex flex-col justify-between border-2 p-[2rem] text-[2.6rem] mx-auto"
+                      className="1100:!w-[20rem] 1100:h-[15rem] 1100:text-[1.4rem] 1350:!w-[25rem] 1350:h-[21rem] 1600:w-[30rem] 1600:h-[21rem] w-[35rem] h-[21rem]  1500:text-[2rem] flex flex-col justify-between border-2 p-[2rem] text-[2.6rem] mx-auto"
                       key={index}
                     >
                       <p>{notice.message}</p>
