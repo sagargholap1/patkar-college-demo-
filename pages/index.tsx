@@ -23,7 +23,7 @@ const Home: NextPage = ({ pageConfig }: any) => {
 };
 
 export const getStaticProps = async () => {
-  const pageConfig = await getConfig("hero");
+  const pageConfig = await getConfig("home");
   return { props: { pageConfig }, revalidate: 120 };
 };
 

@@ -12,13 +12,13 @@ const Contact = ({ config: configuration }: any) => {
   return (
     <section
       className=" py-[7rem] flex flex-col gap-[5rem] wrapper"
-      id={configuration.id}
+      id={configuration?.id}
     >
       {/* DETAILS PART */}
       <div className="flex-col flex justify-end gap-[3rem] w-full">
-        <div className="text-h3 font-6">{configuration.title}</div>
-        <div className="text-base2 font-6 ">{configuration.description}</div>
-        <div className="flex flex-row  1100:flex-col 1100:gap-[2rem]  justify-between items-center text-primary ">
+        <div className="text-h3 font-6">{configuration?.title}</div>
+        <div className="text-base2 font-6 ">{configuration?.description}</div>
+        <div className="flex flex-row  1100:gap-[2rem] gap-[2rem] justify-between items-center 1000:items-start 1100:flex-wrap 11 text-primary ">
           {configuration?.details?.map((detail: any, index: any) => (
             <div
               className="flex justify-evenly items-center gap-[1rem] font-7"
@@ -35,7 +35,7 @@ const Contact = ({ config: configuration }: any) => {
       {/* Form Part */}
 
       {/* <div>
-        <FormsCard cardConfig={configuration.card} bgImage={""} />
+        <FormsCard cardConfig={configuration?.card} bgImage={""} />
       </div> */}
 
       <div className="flex justify-between items-center gap-[10rem] 1100:flex-col">

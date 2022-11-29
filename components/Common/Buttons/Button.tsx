@@ -59,7 +59,7 @@ const Button = ({
   }  1500:text-h6 text-h5`;
   const primaryButtonClass = `${baseClass} bg-primary text-white`;
   const outlineButtonClass = `${baseClass} border-[2px]`;
-  const textButtonClass = `${baseClass}`;
+  const textButtonClass = `${baseClass} hover:font-8`;
   const finalClass =
     type === "primary"
       ? primaryButtonClass

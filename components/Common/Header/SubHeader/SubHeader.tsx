@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,14 +8,25 @@ import { HiOutlineViewGrid } from "react-icons/hi";
 import { RiCloseCircleLine } from "react-icons/ri";
 
 // Configuration
-import { config } from "../config";
+// import { config } from "../config";
 
-const Header = () => {
+// Libs
+import { getConfig } from "@lib/get-config";
+import { config } from "process";
+
+const Header = ({ config: configuration }: any) => {
   // Next Router
   const router = useRouter();
 
   // States
+  const [configData, setConfigData] = useState<any>(null);
   const [showMobileNav, setShowMobileNav] = useState(false);
+  // Update States
+  useEffect(() => {
+    getConfig("header").then((config: any) => {
+      setConfigData(config);
+    });
+  }, []);
 
   return (
     <header className="bg-primary">
@@ -38,10 +49,10 @@ const Header = () => {
           >
             <RiCloseCircleLine />
           </li>
-          {config.header.mainLinks.map((d) => (
+          {configData?.header?.mainLinks.map((d: any) => (
             <li
               key={d.name}
-              className={`h-[9rem] 1200:h-max text-h6 flex items-center justify-between gap-[.5rem]`}
+              className={`h-[9rem] 1200:h-max text-h6 flex items-center justify-center gap-[.5rem]`}
             >
               <Link
                 href={d.url}
@@ -53,13 +64,13 @@ const Header = () => {
                 {d.name}
               </Link>
               <div className="relative w-[1.5rem] h-[1.5rem] font-3">
-                <Image src={config.header.downicon} alt="Icon" fill />
+                <Image src={configData?.header?.downicon} alt="Icon" fill />
               </div>
             </li>
           ))}
         </ul>
         <div className="inline-block relative overflow-hidden w-[3.2rem] h-[3.2rem]">
-          <Image src={config?.header?.searchicon} alt="Grade Logo" fill />
+          <Image src={configData?.header?.searchicon} alt="Grade Logo" fill />
         </div>
 
         <div

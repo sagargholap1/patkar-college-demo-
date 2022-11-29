@@ -6,14 +6,14 @@ import Link from "next/link";
 import SubHeader from "./SubHeader/SubHeader";
 
 // Config
-import { config } from "../Header/config";
+// import { config } from "../Header/config";
 
 // Lib
 import { getConfig } from "@lib/get-config";
 
 import { RiCloseCircleLine } from "react-icons/ri";
 
-const Header = () => {
+const Header = ({ pageConfig }: any) => {
   // Section Configuration
   // const { header: configuration } = config;
 
@@ -106,7 +106,7 @@ const Header = () => {
                   >
                     <RiCloseCircleLine />
                   </li>
-                  {config.header.mainLinks.map((d) => (
+                  {configData?.header?.mainLinks.map((d: any) => (
                     <li key={d.name} className={`h-[9rem] 1200:h-max text-h6`}>
                       <Link
                         href={d.url}
@@ -134,7 +134,7 @@ const Header = () => {
           </div>
         </nav>
         <div className="1200:hidden">
-          <SubHeader />
+          <SubHeader config={pageConfig?.heroSection} />
         </div>
       </header>
     </>

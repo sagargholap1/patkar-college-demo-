@@ -42,7 +42,7 @@ const Hero = ({ config: configuration }: any) => {
         <Button
           type="primary"
           rounded={true}
-          icon="https://i.ibb.co/JQpqsmB/icons8-chevron-left-50.png"
+          icon="https://i.ibb.co/LC8N71j/arrow-95-64.png"
           onClick={() => {
             carouselRef.previous();
           }}
@@ -57,7 +57,7 @@ const Hero = ({ config: configuration }: any) => {
         <Button
           type="primary"
           rounded={true}
-          icon="https://cdn-icons-png.flaticon.com/512/271/271228.png"
+          icon="https://i.ibb.co/bbPNRfC/arrow-30-64.png"
           onClick={() => {
             carouselRef.next();
           }}
@@ -78,10 +78,10 @@ const Hero = ({ config: configuration }: any) => {
             {/* LEFT */}
             <div className="flex flex-col basis-1/2 1500:gap-[5rem] gap-[6rem] ">
               <div className="1500:text-h3 font-5 text-h3 900:text-subtitle2 ">
-                {configuration.title}
+                {configuration?.title}
               </div>
               <div className="1500:text-h5 text-h5 font-4 900:text-subtitle-2 ">
-                {configuration.description}
+                {configuration?.description}
               </div>
               <div className="w-[25%] 1200:w-[50%] ">
                 <Button
@@ -89,7 +89,7 @@ const Hero = ({ config: configuration }: any) => {
                   icon="https://i.ibb.co/bbPNRfC/arrow-30-64.png"
                   url="/"
                 >
-                  {configuration.button_text_primary}
+                  {configuration?.button_text_primary}
                 </Button>
               </div>
             </div>
@@ -101,14 +101,14 @@ const Hero = ({ config: configuration }: any) => {
                   icon="https://i.ibb.co/MVSwZ8X/Vector1.png"
                   url="/"
                 >
-                  {configuration.button_text_outline1}
+                  {configuration?.button_text_outline1}
                 </Button>
                 <Button
                   type="outline"
                   icon="https://i.ibb.co/Rh3j5wd/Vector.png"
                   url="/"
                 >
-                  {configuration.button_text_outline2}
+                  {configuration?.button_text_outline2}
                 </Button>
               </div>
             </div>
