@@ -136,7 +136,7 @@ const Hero = ({ config: configuration }: any) => {
                 {configuration?.notices?.map((notice: any, index: any) => (
                   <Link href={notice.url}>
                     <div
-                      className="1100:!w-[20rem] 1100:h-[15rem] 1100:text-[1.4rem] 1350:!w-[25rem] 1350:h-[21rem] 1600:w-[30rem] 1600:h-[21rem] w-[35rem] h-[21rem]  1500:text-[2rem] flex flex-col justify-between border-2 p-[2rem] text-[2.6rem] mx-auto"
+                      className="1100:!w-[20rem] 1100:h-[15rem] 1200:text-[1.4rem] 1350:!w-[20rem] 1350:h-[20rem] 1600:w-[30rem] 1600:h-[21rem] 1500:text-[2rem]  w-[35rem] h-[21rem] flex flex-col justify-between border-2 p-[2rem] text-[2.6rem] mx-auto"
                       key={index}
                     >
                       <p>{notice.message}</p>
